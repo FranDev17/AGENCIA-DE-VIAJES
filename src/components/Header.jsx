@@ -1,6 +1,6 @@
 import React from 'react';
 import sublogoImage from '../assets/SUBLOGO.png';
-import headerVideo from '../assets/HEADER-VIAJES.mp4';
+import headerImage from '../assets/HEADER.jpg';
 
 const Header = () => {
   return (
@@ -8,25 +8,22 @@ const Header = () => {
       className="relative h-screen w-full overflow-hidden"
       style={{ zIndex: 40 }}
     >
-      {/* Video de fondo */}
-      <video
-        autoPlay
-        loop
-        muted
-        className="absolute top-0 left-0 w-full h-full object-cover"
-      >
-        <source src={headerVideo} type="video/mp4" />
-        Tu navegador no soporta el elemento de video.
-      </video>
+      {/* Imagen de fondo */}
+      <div className="absolute inset-0">
+        <img
+          src={headerImage}
+          alt="Header background"
+          className="absolute top-0 left-0 w-full h-full object-cover"
+        />
+        {/* Overlay para mejorar la visibilidad del texto */}
+        <div className="absolute inset-0 bg-black/50"></div>
+      </div>
 
-      {/* Overlay oscuro para mejorar la legibilidad */}
-      <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-
-      {/* Contenido del header */}
+      {/* Resto del contenido del header */}
       <div className="relative z-10 h-full flex flex-col justify-center items-center text-white px-4">
         {/* Logo */}
         <div className="absolute top-8 left-8">
-          <h1 className="text-3xl font-bold">ViajesDream</h1>
+          <h1 className="text-3xl font-bold">Aqua Scape</h1>
         </div>
 
         {/* Contenido principal */}
