@@ -9,8 +9,8 @@ const handleSubmit = async (e) => {
   e.preventDefault();
 
   const url = isLogin
-    ? 'http://localhost:5251/api/User/login'
-    : 'http://localhost:5251/api/User/register';
+    ? 'http://localhost:5251/api/user/login'
+    : 'http://localhost:5251/api/user/register';
 
   const data = isLogin
     ? { email, password }
