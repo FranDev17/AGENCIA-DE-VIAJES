@@ -18,10 +18,10 @@ export default function Footer() {
         <div>
           <h4 className="text-lg font-semibold mb-4 text-[#38BDF8]">Enlaces</h4>
           <ul className="space-y-2 text-sm text-gray-400">
-            <li><a href="#" className="hover:text-white transition">Inicio</a></li>
-            <li><a href="#" className="hover:text-white transition">Destinos</a></li>
-            <li><a href="#" className="hover:text-white transition">Sobre Nosotros</a></li>
-            <li><a href="#" className="hover:text-white transition">Contacto</a></li>
+            <li><a href="/" className="hover:text-white transition">Inicio</a></li>
+            <li><a href="/boletos" className="hover:text-white transition">Destinos</a></li>
+            <li><a href="/nosotros" className="hover:text-white transition">Sobre Nosotros</a></li>
+
           </ul>
         </div>
 
@@ -48,9 +48,9 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Línea inferior */}
+    
       <div className="mt-10 border-t border-gray-700 pt-6 text-center text-xs text-gray-500">
-        © 2025 ViajesDream. Todos los derechos reservados.
+        © 2025 AquaScape. Todos los derechos reservados.
       </div>
     </footer>
   );

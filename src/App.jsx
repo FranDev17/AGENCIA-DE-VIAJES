@@ -7,6 +7,7 @@ import BottomMenu from './components/BottomMenu';
 import BoletosPage from './pages/boletos/BoletosPage';
 import Footer from './components/Footer';
 import AuthForm from './pages/Login/AuthForm';
+import Nosotros from './pages/Nosotros/Nosotros';
 import './App.css';
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
         />
         <Route path="/boletos" element={<BoletosPage />} />
         <Route path="/login" element={<AuthForm />} />
+        <Route path="/nosotros" element={<Nosotros />} />
         {/* Puedes agregar más rutas aquí */}
       </Routes>
       <BottomMenu />
