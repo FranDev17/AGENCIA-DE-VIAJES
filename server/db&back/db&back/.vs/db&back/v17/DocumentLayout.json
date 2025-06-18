@@ -1,0 +1,144 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\macia\\OneDrive\\Desktop\\Git\\AGENCIA-DE-VIAJES\\server\\db\u0026back\\db\u0026back\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{61EF2A8E-9C64-9129-E879-E583D3C99C2F}|db\u0026back.csproj|c:\\users\\macia\\onedrive\\desktop\\git\\agencia-de-viajes\\server\\db\u0026back\\db\u0026back\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{61EF2A8E-9C64-9129-E879-E583D3C99C2F}|db\u0026back.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{61EF2A8E-9C64-9129-E879-E583D3C99C2F}|db\u0026back.csproj|c:\\users\\macia\\onedrive\\desktop\\git\\agencia-de-viajes\\server\\db\u0026back\\db\u0026back\\models\\webcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{61EF2A8E-9C64-9129-E879-E583D3C99C2F}|db\u0026back.csproj|solutionrelative:models\\webcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{61EF2A8E-9C64-9129-E879-E583D3C99C2F}|db\u0026back.csproj|c:\\users\\macia\\onedrive\\desktop\\git\\agencia-de-viajes\\server\\db\u0026back\\db\u0026back\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{61EF2A8E-9C64-9129-E879-E583D3C99C2F}|db\u0026back.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{61EF2A8E-9C64-9129-E879-E583D3C99C2F}|db\u0026back.csproj|c:\\users\\macia\\onedrive\\desktop\\git\\agencia-de-viajes\\server\\db\u0026back\\db\u0026back\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{61EF2A8E-9C64-9129-E879-E583D3C99C2F}|db\u0026back.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{61EF2A8E-9C64-9129-E879-E583D3C99C2F}|db\u0026back.csproj|c:\\users\\macia\\onedrive\\desktop\\git\\agencia-de-viajes\\server\\db\u0026back\\db\u0026back\\dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{61EF2A8E-9C64-9129-E879-E583D3C99C2F}|db\u0026back.csproj|solutionrelative:dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{61EF2A8E-9C64-9129-E879-E583D3C99C2F}|db\u0026back.csproj|c:\\users\\macia\\onedrive\\desktop\\git\\agencia-de-viajes\\server\\db\u0026back\\db\u0026back\\migrations\\webcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{61EF2A8E-9C64-9129-E879-E583D3C99C2F}|db\u0026back.csproj|solutionrelative:migrations\\webcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{61EF2A8E-9C64-9129-E879-E583D3C99C2F}|db\u0026back.csproj|c:\\users\\macia\\onedrive\\desktop\\git\\agencia-de-viajes\\server\\db\u0026back\\db\u0026back\\migrations\\20250617134729_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{61EF2A8E-9C64-9129-E879-E583D3C99C2F}|db\u0026back.csproj|solutionrelative:migrations\\20250617134729_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LoginDto.cs",
+              "DocumentMoniker": "C:\\Users\\macia\\OneDrive\\Desktop\\Git\\AGENCIA-DE-VIAJES\\server\\db\u0026back\\db\u0026back\\Dtos\\LoginDto.cs",
+              "RelativeDocumentMoniker": "Dtos\\LoginDto.cs",
+              "ToolTip": "C:\\Users\\macia\\OneDrive\\Desktop\\Git\\AGENCIA-DE-VIAJES\\server\\db\u0026back\\db\u0026back\\Dtos\\LoginDto.cs",
+              "RelativeToolTip": "Dtos\\LoginDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-18T01:52:17.842Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "WebContext.cs",
+              "DocumentMoniker": "C:\\Users\\macia\\OneDrive\\Desktop\\Git\\AGENCIA-DE-VIAJES\\server\\db\u0026back\\db\u0026back\\Models\\WebContext.cs",
+              "RelativeDocumentMoniker": "Models\\WebContext.cs",
+              "ToolTip": "C:\\Users\\macia\\OneDrive\\Desktop\\Git\\AGENCIA-DE-VIAJES\\server\\db\u0026back\\db\u0026back\\Models\\WebContext.cs",
+              "RelativeToolTip": "Models\\WebContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-17T14:24:49.302Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\macia\\OneDrive\\Desktop\\Git\\AGENCIA-DE-VIAJES\\server\\db\u0026back\\db\u0026back\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\macia\\OneDrive\\Desktop\\Git\\AGENCIA-DE-VIAJES\\server\\db\u0026back\\db\u0026back\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Controllers\\UserController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-17T14:21:13.604Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "20250617134729_InitialCreate.cs",
+              "DocumentMoniker": "C:\\Users\\macia\\OneDrive\\Desktop\\Git\\AGENCIA-DE-VIAJES\\server\\db\u0026back\\db\u0026back\\Migrations\\20250617134729_InitialCreate.cs",
+              "RelativeDocumentMoniker": "Migrations\\20250617134729_InitialCreate.cs",
+              "ToolTip": "C:\\Users\\macia\\OneDrive\\Desktop\\Git\\AGENCIA-DE-VIAJES\\server\\db\u0026back\\db\u0026back\\Migrations\\20250617134729_InitialCreate.cs",
+              "RelativeToolTip": "Migrations\\20250617134729_InitialCreate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-17T14:12:57.721Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "WebContextModelSnapshot.cs",
+              "DocumentMoniker": "C:\\Users\\macia\\OneDrive\\Desktop\\Git\\AGENCIA-DE-VIAJES\\server\\db\u0026back\\db\u0026back\\Migrations\\WebContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "Migrations\\WebContextModelSnapshot.cs",
+              "ToolTip": "C:\\Users\\macia\\OneDrive\\Desktop\\Git\\AGENCIA-DE-VIAJES\\server\\db\u0026back\\db\u0026back\\Migrations\\WebContextModelSnapshot.cs",
+              "RelativeToolTip": "Migrations\\WebContextModelSnapshot.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAQwBcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-17T14:12:56.331Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\macia\\OneDrive\\Desktop\\Git\\AGENCIA-DE-VIAJES\\server\\db\u0026back\\db\u0026back\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Models\\User.cs",
+              "ToolTip": "C:\\Users\\macia\\OneDrive\\Desktop\\Git\\AGENCIA-DE-VIAJES\\server\\db\u0026back\\db\u0026back\\Models\\User.cs",
+              "RelativeToolTip": "Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-17T13:46:43.753Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\macia\\OneDrive\\Desktop\\Git\\AGENCIA-DE-VIAJES\\server\\db\u0026back\\db\u0026back\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\macia\\OneDrive\\Desktop\\Git\\AGENCIA-DE-VIAJES\\server\\db\u0026back\\db\u0026back\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-17T13:41:34.299Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

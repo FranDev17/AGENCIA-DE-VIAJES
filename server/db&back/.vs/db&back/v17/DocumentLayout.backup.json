@@ -1,0 +1,86 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Juan Pablo\\Desktop\\GitHub\\AGENCIA-DE-VIAJES\\server\\db\u0026back\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{17398D11-2614-49BE-869C-C0029E9C8E87}|db\u0026back\\db\u0026back.csproj|c:\\users\\juan pablo\\desktop\\github\\agencia-de-viajes\\server\\db\u0026back\\db\u0026back\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{17398D11-2614-49BE-869C-C0029E9C8E87}|db\u0026back\\db\u0026back.csproj|solutionrelative:db\u0026back\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{17398D11-2614-49BE-869C-C0029E9C8E87}|db\u0026back\\db\u0026back.csproj|c:\\users\\juan pablo\\desktop\\github\\agencia-de-viajes\\server\\db\u0026back\\db\u0026back\\migrations\\20250617031806_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{17398D11-2614-49BE-869C-C0029E9C8E87}|db\u0026back\\db\u0026back.csproj|solutionrelative:db\u0026back\\migrations\\20250617031806_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{17398D11-2614-49BE-869C-C0029E9C8E87}|db\u0026back\\db\u0026back.csproj|c:\\users\\juan pablo\\desktop\\github\\agencia-de-viajes\\server\\db\u0026back\\db\u0026back\\models\\webcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{17398D11-2614-49BE-869C-C0029E9C8E87}|db\u0026back\\db\u0026back.csproj|solutionrelative:db\u0026back\\models\\webcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{17398D11-2614-49BE-869C-C0029E9C8E87}|db\u0026back\\db\u0026back.csproj|c:\\users\\juan pablo\\desktop\\github\\agencia-de-viajes\\server\\db\u0026back\\db\u0026back\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{17398D11-2614-49BE-869C-C0029E9C8E87}|db\u0026back\\db\u0026back.csproj|solutionrelative:db\u0026back\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "20250617031806_InitialCreate.cs",
+              "DocumentMoniker": "C:\\Users\\Juan Pablo\\Desktop\\GitHub\\AGENCIA-DE-VIAJES\\server\\db\u0026back\\db\u0026back\\Migrations\\20250617031806_InitialCreate.cs",
+              "RelativeDocumentMoniker": "db\u0026back\\Migrations\\20250617031806_InitialCreate.cs",
+              "ToolTip": "C:\\Users\\Juan Pablo\\Desktop\\GitHub\\AGENCIA-DE-VIAJES\\server\\db\u0026back\\db\u0026back\\Migrations\\20250617031806_InitialCreate.cs",
+              "RelativeToolTip": "db\u0026back\\Migrations\\20250617031806_InitialCreate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-17T03:18:06.913Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Juan Pablo\\Desktop\\GitHub\\AGENCIA-DE-VIAJES\\server\\db\u0026back\\db\u0026back\\Program.cs",
+              "RelativeDocumentMoniker": "db\u0026back\\Program.cs",
+              "ToolTip": "C:\\Users\\Juan Pablo\\Desktop\\GitHub\\AGENCIA-DE-VIAJES\\server\\db\u0026back\\db\u0026back\\Program.cs",
+              "RelativeToolTip": "db\u0026back\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-17T02:24:18.907Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "WebContext.cs",
+              "DocumentMoniker": "C:\\Users\\Juan Pablo\\Desktop\\GitHub\\AGENCIA-DE-VIAJES\\server\\db\u0026back\\db\u0026back\\Models\\WebContext.cs",
+              "RelativeDocumentMoniker": "db\u0026back\\Models\\WebContext.cs",
+              "ToolTip": "C:\\Users\\Juan Pablo\\Desktop\\GitHub\\AGENCIA-DE-VIAJES\\server\\db\u0026back\\db\u0026back\\Models\\WebContext.cs",
+              "RelativeToolTip": "db\u0026back\\Models\\WebContext.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAAAAoAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-17T02:19:01.935Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\Juan Pablo\\Desktop\\GitHub\\AGENCIA-DE-VIAJES\\server\\db\u0026back\\db\u0026back\\Models\\User.cs",
+              "RelativeDocumentMoniker": "db\u0026back\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\Juan Pablo\\Desktop\\GitHub\\AGENCIA-DE-VIAJES\\server\\db\u0026back\\db\u0026back\\Models\\User.cs",
+              "RelativeToolTip": "db\u0026back\\Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-17T00:14:01.886Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
