@@ -8,7 +8,16 @@ builder.Services.AddRazorPages();
 
 builder.Services.AddDbContext<WebContext>(options =>
 {
-    options.UseSqlServer("Server=DESKTOP-05Q7LOK\\SQLEXPRESS;Database=UserDB;Trusted_Connection=True;TrustServerCertificate=True;");
+    options.UseSqlServer("Server=YAKULT\\SQLEXPRESS;Database=UserDB;Trusted_Connection=True;TrustServerCertificate=True;");
+});
+
+builder.Services.AddCors(options => 
+{
+    options.AddPolicy("AllowReactApp",
+        policy => policy
+            .AllowAnyOrigin()
+            .AllowAnyMethod()
+            .AllowAnyHeader());
 });
 
 var app = builder.Build();
@@ -22,7 +31,11 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseCors("AllowReactApp"); // Use the CORS policy defined above
+
 app.UseAuthorization();
+
+app.MapControllers(); // Map controllers to handle API requests
 
 app.MapRazorPages();
 

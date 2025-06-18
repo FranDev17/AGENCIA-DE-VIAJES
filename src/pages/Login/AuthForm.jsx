@@ -1,13 +1,49 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import loginImage from '../../assets/LOGIN.png'; 
+import { use } from 'react';
 export default function AuthForm() {
   const [isLogin, setIsLogin] = useState(true);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Lógica de envío del formulario
-  };
+const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  const url = isLogin
+    ? 'http://localhost:5251/api/User/login'
+    : 'http://localhost:5251/api/User/register';
+
+  const data = isLogin
+    ? { email, password }
+    : { name, email, password };
+
+  try {
+    const res = await fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    });
+
+    if (!res.ok) {
+      throw new Error('Error en la solicitud');
+    }
+
+    const result = await res.json();
+    console.log('✅ Éxito:', result);
+    // redirigir o mostrar mensaje de éxito
+
+  } catch (error) {
+    console.error('❌ Error:', error);
+    // mostrar mensaje de error
+  }
+};
+
+
+  // Estados para los campos del formulario
+  const [name,setname] = useState('');
+  const [email,setemail] = useState('');
+  const [password,setpassword] = useState('');
 
   return (
     <div className="min-h-screen flex items-center justify-center relative overflow-hidden">
@@ -142,6 +178,8 @@ export default function AuthForm() {
                       <input
                         type="text"
                         placeholder="Nombre Completo"
+                        value={name}
+                        onChange={(e) => setname(e.target.value)}
                         className="w-full px-4 py-4 bg-blue-50 border border-blue-200 rounded-xl outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 hover:bg-blue-100"
                       />
                     </motion.div>
@@ -151,6 +189,8 @@ export default function AuthForm() {
                     <input
                       type="email"
                       placeholder="Correo Electrónico"
+                      value={email}
+                      onChange={(e) => setemail(e.target.value)}
                       className="w-full px-4 py-4 bg-blue-50 border border-blue-200 rounded-xl outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 hover:bg-blue-100"
                     />
                   </div>
@@ -159,6 +199,8 @@ export default function AuthForm() {
                     <input
                       type="password"
                       placeholder="Contraseña"
+                      value={password}
+                      onChange={(e) => setpassword(e.target.value)}
                       className="w-full px-4 py-4 bg-blue-50 border border-blue-200 rounded-xl outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 hover:bg-blue-100"
                     />
                   </div>
