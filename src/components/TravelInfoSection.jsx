@@ -84,7 +84,7 @@ const TravelInfoSection = () => {
   }
 
   const handleSubmit = (formData) => {
-    // Aquí iría la lógica para enviar el formulario
+    
     console.log('Datos del formulario:', formData);
     cerrarModal();
     toast.success('¡Solicitud enviada! Pronto nos pondremos en contacto contigo.', {
@@ -125,7 +125,7 @@ const TravelInfoSection = () => {
               key={info.id}
               className="group relative overflow-hidden rounded-2xl bg-gradient-to-r from-[#0A0F1C]/40 to-[#1E293B]/40 backdrop-blur-sm border border-[#38BDF8]/20 hover:border-[#38BDF8]/40 transition-all duration-300"
             >
-              {/* Imagen de fondo */}
+             
               <div className="absolute inset-0">
                 <img
                   src={info.imagen}

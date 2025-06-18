@@ -11,18 +11,18 @@ const menuItems = [
     id: 1, 
     name: 'Vuelos', 
     icon: '✈️', 
-    route: '/vuelos', 
+    route: '/boletos', 
     image: avionImage,
     description: {
       title: 'Viaja por los cielos',
-      text: 'Descubre la libertad de volar a más de 500 destinos internacionales con las mejores aerolíneas del mundo'
+      text: 'Descubre la libertad de volar  '
     }
   },
   { 
     id: 2, 
     name: 'Trenes', 
     icon: '🚂', 
-    route: '/trenes', 
+    route: '/boletos', 
     image: trenImage,
     description: {
       title: 'Aventura sobre rieles',
@@ -33,7 +33,7 @@ const menuItems = [
     id: 3, 
     name: 'Autobuses', 
     icon: '🚌', 
-    route: '/autobuses', 
+    route: '/boletos', 
     image: autobusImage,
     description: {
       title: 'Viajes por tierra',
@@ -44,7 +44,7 @@ const menuItems = [
     id: 4, 
     name: 'Cruceros', 
     icon: '🚢', 
-    route: '/cruceros', 
+    route: '/boleto', 
     image: cruceroImage,
     description: {
       title: 'Navega por el mundo',

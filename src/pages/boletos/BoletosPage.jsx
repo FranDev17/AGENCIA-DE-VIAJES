@@ -3,28 +3,158 @@ import { toast } from 'react-hot-toast';
 
 const tiposViaje = [
   { key: 'avion', label: 'Avión', icon: '✈️' },
-  { key: 'tren', label: 'Tren', icon: '🚂' },
   { key: 'autobus', label: 'Autobús', icon: '🚌' },
-  { key: 'crucero', label: 'Crucero', icon: '🚢' },
+  { key: 'ferry', label: 'Ferry', icon: '⛴️' },
 ];
 
 const destinosMock = {
   avion: [
-    { id: 1, origen: 'Madrid', destino: 'París', horarios: ['08:00', '14:00', '20:00'], precio: 120 },
-    { id: 2, origen: 'Barcelona', destino: 'Londres', horarios: ['09:30', '16:00'], precio: 150 },
-    { id: 3, origen: 'Sevilla', destino: 'Roma', horarios: ['07:00', '18:00'], precio: 110 },
-  ],
-  tren: [
-    { id: 4, origen: 'Madrid', destino: 'Barcelona', horarios: ['06:00', '12:00', '18:00'], precio: 60 },
-    { id: 5, origen: 'Valencia', destino: 'Sevilla', horarios: ['10:00', '15:00'], precio: 70 },
+    { 
+      id: 1, 
+      origen: 'Ciudad de México', 
+      destino: 'Cancún', 
+      horarios: ['08:00', '14:00', '20:00'], 
+      precio: {
+        'Primera Clase': 8500,
+        'Business': 6500,
+        'Económica': 4500,
+      },
+      duracion: '2h 15min'
+    },
+    { 
+      id: 2, 
+      origen: 'Ciudad de México', 
+      destino: 'Los Cabos', 
+      horarios: ['09:30', '16:00'], 
+      precio: {
+        'Primera Clase': 9500,
+        'Business': 7500,
+        'Económica': 5500,
+      },
+      duracion: '2h 45min'
+    },
   ],
   autobus: [
-    { id: 6, origen: 'Madrid', destino: 'Valencia', horarios: ['08:00', '13:00', '19:00'], precio: 30 },
-    { id: 7, origen: 'Barcelona', destino: 'Zaragoza', horarios: ['07:30', '17:00'], precio: 25 },
+    { 
+      id: 3, 
+      origen: 'Ciudad de México', 
+      destino: 'Cancún', 
+      horarios: ['10:00', '16:00', '22:00'], 
+      precio: {
+        'Premium': 2800,
+        'Estándar': 1800,
+      },
+      duracion: '24h'
+    },
+    { 
+      id: 4, 
+      origen: 'Ciudad de México', 
+      destino: 'Los Cabos',
+      escala: true,
+      horarios: ['08:00', '14:00'],
+      precio: {
+        'Premium': 3500,
+        'Estándar': 2500,
+      },
+      duracion: '36h',
+      infoEscala: 'Transbordo en Guadalajara'
+    },
+    { 
+      id: 5, 
+      origen: 'Ciudad de México', 
+      destino: 'La Paz',
+      escala: true,
+      horarios: ['07:00', '13:00'],
+      precio: {
+        'Premium': 3800,
+        'Estándar': 2800,
+      },
+      duracion: '38h',
+      infoEscala: 'Transbordo en Guadalajara y Mazatlán'
+    },  
   ],
-  crucero: [
-    { id: 8, origen: 'Barcelona', destino: 'Islas Baleares', horarios: ['12:00'], precio: 300 },
-    { id: 9, origen: 'Valencia', destino: 'Cerdeña', horarios: ['15:00'], precio: 350 },
+  ferry: [
+    { 
+      id: 6, 
+      origen: 'La Paz', 
+      destino: 'Los Cabos', 
+      horarios: ['09:00', '15:00'], 
+      precio: {
+        'Premium': 1200,
+        'Comfort': 1000,
+        'Estándar': 800,
+      },
+      duracion: '3h',
+      requiereConexion: true,
+      infoConexion: 'Necesitas llegar primero a La Paz desde Ciudad de México'
+    }
+  ],
+};
+
+const hoteles = {
+  'Cancún': [
+    {
+      nombre: 'Grand Luxe Resort',
+      categoria: 'Gran Turismo',
+      precioNoche: 5500,
+      amenidades: ['Playa privada', 'Spa', 'Golf', 'All Inclusive'],
+    },
+    {
+      nombre: 'Boutique Maya',
+      categoria: 'Boutique',
+      precioNoche: 4500,
+      amenidades: ['Diseño único', 'Servicio personalizado', 'Restaurant gourmet'],
+    },
+    {
+      nombre: 'Ocean View Palace',
+      categoria: '5 estrellas',
+      precioNoche: 3800,
+      amenidades: ['Vista al mar', 'Piscinas', 'Restaurantes'],
+    },
+    {
+      nombre: 'Caribe Resort',
+      categoria: '4 estrellas',
+      precioNoche: 2500,
+      amenidades: ['Piscina', 'Restaurante', 'Bar'],
+    },
+    {
+      nombre: 'Hotel Tropical',
+      categoria: '3 estrellas',
+      precioNoche: 1800,
+      amenidades: ['Desayuno incluido', 'WiFi', 'A/C'],
+    },
+  ],
+  'Los Cabos': [
+    {
+      nombre: 'Pacific Grand Resort',
+      categoria: 'Gran Turismo',
+      precioNoche: 6000,
+      amenidades: ['Playa privada', 'Spa', 'Golf', 'All Inclusive'],
+    },
+    {
+      nombre: 'Cabo Boutique',
+      categoria: 'Boutique',
+      precioNoche: 4800,
+      amenidades: ['Diseño único', 'Servicio personalizado', 'Restaurant gourmet'],
+    },
+    {
+      nombre: 'Sunset Palace',
+      categoria: '5 estrellas',
+      precioNoche: 4000,
+      amenidades: ['Vista al mar', 'Piscinas', 'Restaurantes'],
+    },
+    {
+      nombre: 'Baja Resort',
+      categoria: '4 estrellas',
+      precioNoche: 2800,
+      amenidades: ['Piscina', 'Restaurante', 'Bar'],
+    },
+    {
+      nombre: 'Hotel del Mar',
+      categoria: '3 estrellas',
+      precioNoche: 2000,
+      amenidades: ['Desayuno incluido', 'WiFi', 'A/C'],
+    },
   ],
 };
 
@@ -39,7 +169,8 @@ const clasesPorTipo = {
   avion: ['Económica', 'Business', 'Primera Clase'],
   tren: ['Turista', 'Preferente', 'Cama', 'Premium'],
   autobus: ['Estándar', 'Premium'],
-  crucero: ['Interior', 'Exterior', 'Suite', 'Balcón']
+  crucero: ['Interior', 'Exterior', 'Suite', 'Balcón'],
+  ferry: ['Estándar', 'Comfort', 'Premium'],
 };
 
 const ASIENTOS_POR_FILA = 6;
@@ -142,6 +273,8 @@ const BoletosPage = () => {
   const [asientosBusState, setAsientosBusState] = useState(asientosBus);
   const [asientosBusSeleccionados, setAsientosBusSeleccionados] = useState([]);
   const [mostrarSeleccionAsientosBus, setMostrarSeleccionAsientosBus] = useState(false);
+  const [selectedHotel, setSelectedHotel] = useState(null);
+  const [nights, setNights] = useState(1);
 
   const destinos = destinosMock[tipo];
 
@@ -157,6 +290,14 @@ const BoletosPage = () => {
   }, [form.adultos, form.menores]);
 
   const handleComprar = (destino, horario) => {
+    if (tipo === 'ferry' && destino.origen === 'La Paz') {
+      // Verificar si ya tienen un boleto para llegar a La Paz
+      const rutaLaPaz = destinosMock.autobus.find(d => d.destino === 'La Paz');
+      if (!rutaLaPaz) {
+        toast.error('Primero necesitas seleccionar cómo llegar a La Paz');
+        return;
+      }
+    }
     setDestinoSeleccionado(destino);
     setHorarioSeleccionado(horario);
   };
@@ -180,19 +321,11 @@ const BoletosPage = () => {
       return;
     }
 
-    if (tipo === 'avion') {
-      setMostrarSeleccionAsientos(true);
-    } else if (tipo === 'tren') {
+    if (tipo === 'ferry') {
+      // Verificar si ya seleccionó transporte a La Paz
+      const rutaLaPaz = destinosMock.autobus.find(d => d.destino === 'La Paz');
       if (!form.clase) {
         toast.error('Por favor, selecciona una clase');
-        return;
-      }
-      setMostrarSeleccionAsientosTren(true);
-    } else if (tipo === 'autobus') {
-      setMostrarSeleccionAsientosBus(true);
-    } else if (tipo === 'crucero') {
-      if (!form.clase) {
-        toast.error('Por favor, selecciona un tipo de camarote');
         return;
       }
       setCompraExitosa(true);
@@ -211,6 +344,10 @@ const BoletosPage = () => {
           nombresMenores: [''],
         });
       }, 3500);
+    } else if (tipo === 'avion') {
+      setMostrarSeleccionAsientos(true);
+    } else if (tipo === 'autobus') {
+      setMostrarSeleccionAsientosBus(true);
     }
   };
 
@@ -345,6 +482,20 @@ const BoletosPage = () => {
     return claseInfo ? claseInfo.numeroVagon : 3; // Por defecto, Vagón 3 (Turista)
   };
 
+  // Calcular precio total
+  const calculateTotalPrice = () => {
+    if (!destinoSeleccionado || !form.clase) return 0;
+    
+    const transportPrice = destinoSeleccionado.precio[form.clase];
+    const hotelPrice = selectedHotel ? selectedHotel.precioNoche * nights : 0;
+    
+    const totalTransporte = transportPrice * (
+      Number(form.adultos) + (Number(form.menores) * 0.8)
+    );
+    
+    return totalTransporte + hotelPrice;
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#0A0F1C] via-[#0F172A] to-[#1E293B] py-12 px-4">
       <div className="max-w-5xl mx-auto bg-white/5 rounded-2xl shadow-2xl p-8">
@@ -370,7 +521,22 @@ const BoletosPage = () => {
                 <div key={dest.id} className="bg-white/10 rounded-xl p-5 shadow flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                   <div>
                     <div className="font-bold text-lg text-white">{dest.origen} → {dest.destino}</div>
-                    <div className="text-[#38BDF8] font-medium">Desde $ {dest.precio}</div>
+                    <div className="text-[#38BDF8] font-medium">
+                      Desde $ {Math.min(...Object.values(dest.precio))}
+                    </div>
+                    {dest.escala && (
+                      <div className="text-yellow-400 text-sm mt-1">
+                        Nota: {dest.infoEscala}
+                      </div>
+                    )}
+                    {dest.requiereConexion && (
+                      <div className="text-yellow-400 text-sm mt-1">
+                        Nota: {dest.infoConexion}
+                      </div>
+                    )}
+                    <div className="text-white/60 text-sm mt-1">
+                      Duración: {dest.duracion}
+                    </div>
                   </div>
                   <div className="flex flex-wrap gap-2 items-center">
                     {dest.horarios.map((h) => (
@@ -396,7 +562,14 @@ const BoletosPage = () => {
                 <div className="text-white font-semibold">
                   <span className="text-[#2DD4BF]">Trayecto:</span> {destinoSeleccionado.origen} → {destinoSeleccionado.destino} <br />
                   <span className="text-[#2DD4BF]">Horario:</span> {horarioSeleccionado} <br />
-                  <span className="text-[#2DD4BF]">Precio:</span> {destinoSeleccionado.precio}€
+                  <span className="text-[#2DD4BF]">Precios:</span>
+                  <ul className="mt-1 space-y-1">
+                    {Object.entries(destinoSeleccionado.precio).map(([clase, precio]) => (
+                      <li key={clase} className="text-sm">
+                        {clase}: ${precio}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
                 <input
                   type="text"
@@ -485,10 +658,13 @@ const BoletosPage = () => {
                     ))}
                   </div>
                 )}
-                {(tipo === 'avion' || tipo === 'tren' || tipo === 'crucero') && (
+                {(tipo === 'avion' || tipo === 'tren' || tipo === 'autobus' || tipo === 'crucero' || tipo === 'ferry') && (
                   <div>
                     <label className="block text-xs text-white mb-1">
-                      {tipo === 'crucero' ? 'Tipo de camarote' : 'Tipo de clase'}
+                      {tipo === 'crucero' ? 'Tipo de camarote' : 
+                       tipo === 'autobus' ? 'Tipo de servicio' : 
+                       tipo === 'ferry' ? 'Tipo de clase' :
+                       'Tipo de clase'}
                     </label>
                     <select
                       name="clase"
@@ -498,7 +674,10 @@ const BoletosPage = () => {
                       className="w-full px-4 py-2 rounded-lg border border-[#38BDF8] bg-white/80 text-[#0A0F1C] focus:outline-none focus:ring-2 focus:ring-[#38BDF8]"
                     >
                       <option value="">
-                        {tipo === 'crucero' ? 'Selecciona un tipo de camarote' : 'Selecciona una clase'}
+                        {tipo === 'crucero' ? 'Selecciona un tipo de camarote' : 
+                         tipo === 'autobus' ? 'Selecciona tipo de servicio' :
+                         tipo === 'ferry' ? 'Selecciona una clase' :
+                         'Selecciona una clase'}
                       </option>
                       {clasesPorTipo[tipo].map((c) => (
                         <option key={c} value={c}>
@@ -723,6 +902,58 @@ const BoletosPage = () => {
           </div>
         </div>
       )}
+      
+      {/* Agregar sección de hoteles después del formulario de transporte */}
+      {destinoSeleccionado && (
+        <div className="mt-8">
+          <h2 className="text-2xl font-bold mb-4 text-[#38BDF8]">Selecciona tu hotel</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {hoteles[destinoSeleccionado.destino].map((hotel) => (
+              <div
+                key={hotel.nombre}
+                className={`bg-white/10 rounded-xl p-6 cursor-pointer transition-all duration-300 ${
+                  selectedHotel?.nombre === hotel.nombre ? 'ring-2 ring-[#38BDF8] scale-105' : 'hover:bg-white/20'
+                }`}
+                onClick={() => setSelectedHotel(hotel)}
+              >
+                <h3 className="text-xl font-bold text-white mb-2">{hotel.nombre}</h3>
+                <p className="text-[#38BDF8] font-medium mb-2">Categoría: {hotel.categoria}</p>
+                <p className="text-white/80 mb-4">Precio por noche: ${hotel.precioNoche}</p>
+                <div className="space-y-1">
+                  {hotel.amenidades.map((amenidad, index) => (
+                    <p key={index} className="text-sm text-white/60">• {amenidad}</p>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+          
+          {selectedHotel && (
+            <div className="mt-6">
+              <label className="block text-white mb-2">Número de noches:</label>
+              <input
+                type="number"
+                min="1"
+                value={nights}
+                onChange={(e) => setNights(Number(e.target.value))}
+                className="w-32 px-4 py-2 rounded-lg border border-[#38BDF8] bg-white/80 text-[#0A0F1C]"
+              />
+            </div>
+          )}
+
+          <div className="mt-6 p-4 bg-white/10 rounded-xl">
+            <h3 className="text-xl font-bold text-white mb-4">Resumen de costos</h3>
+            <div className="space-y-2 text-white/80">
+              <p>Transporte: ${destinoSeleccionado.precio[form.clase]} x {form.adultos} adultos + {form.menores} menores</p>
+              {selectedHotel && (
+                <p>Hotel: ${selectedHotel.precioNoche} x {nights} noches</p>
+              )}
+              <p className="text-xl font-bold text-[#38BDF8]">Total: ${calculateTotalPrice()}</p>
+            </div>
+          </div>
+        </div>
+      )}
+      
       <style>{`
         @keyframes bounce-in {
           0% { transform: scale(0.8); opacity: 0; }

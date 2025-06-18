@@ -45,7 +45,7 @@ const Header = () => {
           <p className="text-xl md:text-2xl mb-8 text-white/90">
             Vive experiencias inolvidables con nosotros
           </p>
-          <button className="bg-yellow-400 text-black px-8 py-3 rounded-full font-semibold hover:bg-yellow-300 transition-colors">
+          <button onClick={() => window.location.href = "/boletos"} className="bg-yellow-400 text-black px-8 py-3 rounded-full font-semibold hover:bg-yellow-300 transition-colors">
             Explorar Destinos
           </button>
         </div>
