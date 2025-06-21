@@ -1,8 +1,17 @@
 import React from 'react';
 import sublogoImage from '../assets/SUBLOGO.png';
 import headerImage from '../assets/HEADER.jpg';
+import { useEffect, useState } from 'react';
 
 const Header = () => {
+  const [userName, setUserName] = useState('');
+
+  useEffect(() => {
+    const user = JSON.parse(localStorage.getItem('user'));
+    if (user?.name) {
+      setUserName(user.name);
+    }
+  }, []);
   return (
     <header 
       className="relative h-screen w-full overflow-hidden"
@@ -25,7 +34,9 @@ const Header = () => {
         <div className="absolute top-8 left-8">
           <h1 className="text-3xl font-bold">Aqua Scape</h1>
         </div>
-
+        <div className="absolute top-8 left-13">
+          <h1 className="text-3xl font-bold">{userName}</h1>
+        </div>
         {/* Contenido principal */}
         <div className="text-center relative">
           <div className="relative inline-block">

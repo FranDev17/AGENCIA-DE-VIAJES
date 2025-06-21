@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import loginImage from '../../assets/LOGIN.png'; 
 import { use } from 'react';
+import { useNavigate } from 'react-router-dom';
 export default function AuthForm() {
   const [isLogin, setIsLogin] = useState(true);
+  const navigate = useNavigate();
 
 const handleSubmit = async (e) => {
   e.preventDefault();
@@ -32,6 +34,10 @@ const handleSubmit = async (e) => {
     const result = await res.json();
     console.log('✅ Éxito:', result);
     // redirigir o mostrar mensaje de éxito
+    if (isLogin && result.user) {
+      localStorage.setItem('user', JSON.stringify(result.user));
+      navigate('/'); // Redirigir al inicio después de iniciar sesión
+    }
 
   } catch (error) {
     console.error('❌ Error:', error);
