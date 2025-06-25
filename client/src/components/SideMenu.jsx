@@ -40,17 +40,7 @@ const menuItems = [
       text: 'Conecta con los mejores destinos nacionales de forma económica y flexible'
     }
   },
-  { 
-    id: 4, 
-    name: 'Cruceros', 
-    icon: '🚢', 
-    route: '/boleto', 
-    image: cruceroImage,
-    description: {
-      title: 'Navega por el mundo',
-      text: 'Vive la experiencia única de recorrer los mares más hermosos en hoteles flotantes de lujo'
-    }
-  }
+ 
 ];
 
 const SideMenu = () => {

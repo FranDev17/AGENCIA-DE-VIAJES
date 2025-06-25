@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import avionImage from '../assets/AVION.jpg'
 import trenImage from '../assets/TREN.jpg'
 import autobusImage from '../assets/AUTOBUS.jpg'
-import cruceroImage from '../assets/CRUCERO.jpg'
+
 import TravelInfoModal from './modals/TravelInfoModal'
 import toast, { Toaster } from 'react-hot-toast'
 
@@ -45,28 +45,14 @@ const travelInfo = [
     titulo: 'Viajes por tierra',
     descripcion: 'Conecta con los mejores destinos nacionales de forma económica y flexible.',
     caracteristicas: [
-      'Rutas nacionales e internacionales',
+      
       'Asientos reclinables',
       'Aire acondicionado',
       'Paradas estratégicas',
       'Servicio de equipaje'
     ]
   },
-  {
-    id: 4,
-    tipo: 'Cruceros',
-    icon: '🚢',
-    imagen: cruceroImage,
-    titulo: 'Navega por el mundo',
-    descripcion: 'Vive la experiencia única de recorrer los mares más hermosos en hoteles flotantes de lujo.',
-    caracteristicas: [
-      'Cruceros por el Mediterráneo',
-      'Rutas por el Caribe',
-      'Todo incluido',
-      'Entretenimiento a bordo',
-      'Excursiones en puerto'
-    ]
-  }
+  
 ]
 
 const TravelInfoSection = () => {

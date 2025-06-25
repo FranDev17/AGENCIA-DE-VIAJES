@@ -205,13 +205,7 @@ const TravelInfoModal = ({ isOpen, onClose, tipoSeleccionado, onSubmit }) => {
           requerido: true,
           opciones: ['Turista', 'Preferente','Premium']
         },
-        {
-          id: 'ruta',
-          nombre: 'Ruta Preferida',
-          tipo: 'text',
-          requerido: false,
-          placeholder: 'Ej: Madrid-Barcelona'
-        }
+        
       ]
     },
     Autobuses: {
@@ -223,37 +217,12 @@ const TravelInfoModal = ({ isOpen, onClose, tipoSeleccionado, onSubmit }) => {
           nombre: 'Tipo de Servicio',
           tipo: 'select',
           requerido: true,
-          opciones: ['Regular', 'Premium']
+          opciones: ['Estandar', 'Premium']
         },
-        {
-          id: 'rutaBus',
-          nombre: 'Ruta Preferida',
-          tipo: 'text',
-          requerido: false,
-          placeholder: 'Ej: Madrid-Valencia'
-        }
+      
       ]
     },
-    Cruceros: {
-      titulo: 'Crucero',
-      descripcion: 'Descubre destinos increíbles en crucero',
-      camposAdicionales: [
-        {
-          id: 'tipoCrucero',
-          nombre: 'Tipo de Camarotes',
-          tipo: 'select',
-          requerido: true,
-          opciones: ['Interior', 'Vista al mar', 'Balcón', 'Suite']
-        },
-        {
-          id: 'duracion',
-          nombre: 'Duración Preferida',
-          tipo: 'select',
-          requerido: true,
-          opciones: ['3-5 días', '6-8 días', ]
-        }
-      ]
-    }
+    
   }
 
   const infoTipo = infoEspecifica[tipoSeleccionado]

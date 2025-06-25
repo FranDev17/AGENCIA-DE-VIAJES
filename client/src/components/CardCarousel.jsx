@@ -20,7 +20,7 @@ export default function CardCarousel() {
     <div className="py-16 px-4 bg-gradient-to-br from-[#0A0F1C] via-[#0F172A] to-[#1E293B] relative overflow-x-hidden">
       {/* Título del carrusel */}
       <h2 className="text-4xl font-bold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-[#38BDF8] to-[#2DD4BF]">
-        Explora Nuestros Destinos
+      Encuentra Tu Paraíso
       </h2>
 
       {/* Carrusel de tarjetas */}

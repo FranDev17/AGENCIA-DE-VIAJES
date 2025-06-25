@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { toast } from 'react-hot-toast';
+import PaymentModal from '../../components/modals/PaymentModal'; // Ajusta la ruta si es necesario
+
 
 const tiposViaje = [
   { key: 'avion', label: 'Avión', icon: '✈️' },
   { key: 'autobus', label: 'Autobús', icon: '🚌' },
-  { key: 'ferry', label: 'Ferry', icon: '⛴️' },
+  { key: 'tren', label: 'Tren', icon: '🚆' },
 ];
 
 const destinosMock = {
@@ -57,37 +59,34 @@ const destinosMock = {
         'Estándar': 2500,
       },
       duracion: '36h',
-      infoEscala: 'Transbordo en Guadalajara'
+      infoEscala: 'Transbordo en Tijana',
+    }, 
+  ],
+  tren: [
+    { 
+      id: 10, 
+      origen: 'Ciudad de México', 
+      destino: 'Cancún', 
+      horarios: ['07:00', '13:00', '19:00'], 
+      precio: {
+        'Premium': 4200,
+        'Preferente': 3200,
+        'Turista': 2200,
+      },
+      duracion: '20h'
     },
     { 
-      id: 5, 
+      id: 11, 
       origen: 'Ciudad de México', 
-      destino: 'La Paz',
-      escala: true,
-      horarios: ['07:00', '13:00'],
-      precio: {
-        'Premium': 3800,
-        'Estándar': 2800,
-      },
-      duracion: '38h',
-      infoEscala: 'Transbordo en Guadalajara y Mazatlán'
-    },  
-  ],
-  ferry: [
-    { 
-      id: 6, 
-      origen: 'La Paz', 
       destino: 'Los Cabos', 
-      horarios: ['09:00', '15:00'], 
+      horarios: ['08:00', '15:00'], 
       precio: {
-        'Premium': 1200,
-        'Comfort': 1000,
-        'Estándar': 800,
+        'Premium': 4800,
+        'Preferente': 3700,
+        'Turista': 2700,
       },
-      duracion: '3h',
-      requiereConexion: true,
-      infoConexion: 'Necesitas llegar primero a La Paz desde Ciudad de México'
-    }
+      duracion: '24h'
+    },
   ],
 };
 
@@ -167,7 +166,7 @@ const CLASES_AVION = [
 
 const clasesPorTipo = {
   avion: ['Económica', 'Business', 'Primera Clase'],
-  tren: ['Turista', 'Preferente', 'Cama', 'Premium'],
+  tren: ['Turista', 'Preferente','Premium'],
   autobus: ['Estándar', 'Premium'],
   crucero: ['Interior', 'Exterior', 'Suite', 'Balcón'],
   ferry: ['Estándar', 'Comfort', 'Premium'],
@@ -208,6 +207,7 @@ const CLASES_TREN = [
   { nombre: 'Premium', filas: [0], numeroVagon: 1 }, // Vagón 1
   { nombre: 'Preferente', filas: [1, 2], numeroVagon: 2 }, // Vagón 2
   { nombre: 'Turista', filas: [3, 4, 5, 6, 7, 8, 9], numeroVagon: 3 }, // Vagón 3
+  { nombre: 'Turista', filas: [9], numeroVagon: 3 }, // <-- Agrega esta línea
 ];
 
 const FILAS_TREN = 10; 
@@ -275,6 +275,7 @@ const BoletosPage = () => {
   const [mostrarSeleccionAsientosBus, setMostrarSeleccionAsientosBus] = useState(false);
   const [selectedHotel, setSelectedHotel] = useState(null);
   const [nights, setNights] = useState(1);
+  const [mostrarPaymentModal, setMostrarPaymentModal] = useState(false);
 
   const destinos = destinosMock[tipo];
 
@@ -320,34 +321,14 @@ const BoletosPage = () => {
       toast.error('Por favor, selecciona un destino y un horario');
       return;
     }
-
-    if (tipo === 'ferry') {
-      // Verificar si ya seleccionó transporte a La Paz
-      const rutaLaPaz = destinosMock.autobus.find(d => d.destino === 'La Paz');
-      if (!form.clase) {
-        toast.error('Por favor, selecciona una clase');
-        return;
-      }
-      setCompraExitosa(true);
-      setTimeout(() => {
-        setCompraExitosa(false);
-        setDestinoSeleccionado(null);
-        setHorarioSeleccionado('');
-        setForm({
-          nombre: '',
-          email: '',
-          telefono: '',
-          adultos: 1,
-          menores: 0,
-          clase: '',
-          nombresAdultos: [''],
-          nombresMenores: [''],
-        });
-      }, 3500);
-    } else if (tipo === 'avion') {
+    if (tipo === 'avion') {
       setMostrarSeleccionAsientos(true);
     } else if (tipo === 'autobus') {
       setMostrarSeleccionAsientosBus(true);
+    } else if (tipo === 'tren') {
+      setMostrarSeleccionAsientosTren(true);
+    } else {
+      setMostrarPaymentModal(true);
     }
   };
 
@@ -412,69 +393,21 @@ const BoletosPage = () => {
   };
 
   const confirmarAsientos = () => {
-    setCompraExitosa(true);
     setMostrarSeleccionAsientos(false);
-    setTimeout(() => {
-      setCompraExitosa(false);
-      setDestinoSeleccionado(null);
-      setHorarioSeleccionado('');
-      setForm({
-        nombre: '',
-        email: '',
-        telefono: '',
-        adultos: 1,
-        menores: 0,
-        clase: '',
-        nombresAdultos: [''],
-        nombresMenores: [''],
-      });
-      setAsientos(asientosAvion);
-      setAsientosSeleccionados([]);
-    }, 3500);
+    setMostrarPaymentModal(true);
+    // Limpieza de asientos si lo deseas aquí
   };
 
   const confirmarAsientosTren = () => {
-    setCompraExitosa(true);
     setMostrarSeleccionAsientosTren(false);
-    setTimeout(() => {
-      setCompraExitosa(false);
-      setDestinoSeleccionado(null);
-      setHorarioSeleccionado('');
-      setForm({
-        nombre: '',
-        email: '',
-        telefono: '',
-        adultos: 1,
-        menores: 0,
-        clase: '',
-        nombresAdultos: [''],
-        nombresMenores: [''],
-      });
-      setAsientosTrenState(asientosTren);
-      setAsientosTrenSeleccionados([]);
-    }, 3500);
+    setMostrarPaymentModal(true);
+    // Limpieza de asientos si lo deseas aquí
   };
 
   const confirmarAsientosBus = () => {
-    setCompraExitosa(true);
     setMostrarSeleccionAsientosBus(false);
-    setTimeout(() => {
-      setCompraExitosa(false);
-      setDestinoSeleccionado(null);
-      setHorarioSeleccionado('');
-      setForm({
-        nombre: '',
-        email: '',
-        telefono: '',
-        adultos: 1,
-        menores: 0,
-        clase: '',
-        nombresAdultos: [''],
-        nombresMenores: [''],
-      });
-      setAsientosBusState(asientosBus);
-      setAsientosBusSeleccionados([]);
-    }, 3500);
+    setMostrarPaymentModal(true);
+    // Limpieza de asientos si lo deseas aquí
   };
 
   const getVagonAsignado = (clase) => {
@@ -789,9 +722,10 @@ const BoletosPage = () => {
             <div className="w-20 h-6 bg-gradient-to-b from-[#38BDF8] to-[#2DD4BF] rounded-t-2xl mb-2"></div>
             <div className="flex flex-col items-center">
               {asientosTrenState
-                .filter((filaArr) => filaArr.some((asiento) => asiento && asiento.numeroVagon === getVagonAsignado(form.clase)))
-                .map((filaArr, filaIdx) => (
-                  <div key={filaIdx} className="flex items-center mb-1">
+                .map((filaArr, filaIdxOriginal) => ({ filaArr, filaIdxOriginal }))
+                .filter(({ filaArr }) => filaArr.some((asiento) => asiento && asiento.numeroVagon === getVagonAsignado(form.clase)))
+                .map(({ filaArr, filaIdxOriginal }) => (
+                  <div key={filaIdxOriginal} className="flex items-center mb-1">
                     {filaArr.map((asiento, colIdx) =>
                       asiento === null ? (
                         <div key={colIdx} className="w-6"></div>
@@ -806,7 +740,7 @@ const BoletosPage = () => {
                               asiento.tipo === 'ventana' ? 'bg-white border-[#38BDF8] text-[#38BDF8] hover:bg-[#38BDF8]/10 hover:scale-105' :
                               'bg-white border-[#2DD4BF] text-[#2DD4BF] hover:bg-[#2DD4BF]/10 hover:scale-105'}
                           `}
-                          onClick={() => seleccionarAsientoTren(filaIdx, colIdx)}
+                          onClick={() => seleccionarAsientoTren(filaIdxOriginal, colIdx)}
                           disabled={asiento.ocupado || (form.clase && asiento.clase !== form.clase)}
                           title={`Asiento ${asiento.numero} (${asiento.clase})`}
                         >
@@ -954,6 +888,19 @@ const BoletosPage = () => {
         </div>
       )}
       
+      {/* Modal de pago */}
+      {mostrarPaymentModal && (
+        <PaymentModal
+          isOpen={mostrarPaymentModal}
+          onClose={() => setMostrarPaymentModal(false)}
+          destinoSeleccionado={destinoSeleccionado}
+          form={form}
+          selectedHotel={selectedHotel}
+          nights={nights}
+          calculateTotalPrice={calculateTotalPrice}
+        />
+      )}
+
       <style>{`
         @keyframes bounce-in {
           0% { transform: scale(0.8); opacity: 0; }
