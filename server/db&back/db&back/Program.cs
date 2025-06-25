@@ -1,5 +1,7 @@
 using db_back.Models;
 using Microsoft.EntityFrameworkCore;
+using Npgsql.EntityFrameworkCore.PostgreSQL;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,7 +10,7 @@ builder.Services.AddRazorPages();
 
 builder.Services.AddDbContext<WebContext>(options =>
 {
-    options.UseSqlServer("Server=YAKULT\\SQLEXPRESS;Database=UserDB;Trusted_Connection=True;TrustServerCertificate=True;");
+    options.UseNpgsql("Host=dpg-d1dl9eur433s73fhan20-a.oregon-postgres.render.com;Port=5432;Username=userdb_dwi7_user;Password=Vej9XS7Z92f9JXrYZbIeEWhI6vDL7UbV;Database=userdb_dwi7;SSL Mode=Require;Trust Server Certificate=true;");
 });
 
 builder.Services.AddCors(options => 

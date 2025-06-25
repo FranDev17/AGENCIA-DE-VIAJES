@@ -23,7 +23,7 @@ namespace db_back.Controllers
                 return BadRequest(new { message = "Invalid user data." });
             }
 
-            user.logDate = DateTime.Now;
+            user.logDate = DateTime.UtcNow;
             _context.Users.Add(user);
             await _context.SaveChangesAsync();
 
@@ -46,7 +46,7 @@ namespace db_back.Controllers
                 return Unauthorized(new { message = "Invalid email or password." });
             }
 
-            existingUser.logDate = DateTime.Now;
+            existingUser.logDate = DateTime.UtcNow;
             await _context.SaveChangesAsync();
 
             return Ok(new

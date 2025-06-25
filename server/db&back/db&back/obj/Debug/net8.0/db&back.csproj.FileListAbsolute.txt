@@ -341,3 +341,5 @@ C:\Users\macia\OneDrive\Desktop\Git\AGENCIA-DE-VIAJES\server\db&back\db&back\obj
 C:\Users\macia\OneDrive\Desktop\Git\AGENCIA-DE-VIAJES\server\db&back\db&back\obj\Debug\net8.0\db&back.pdb
 C:\Users\macia\OneDrive\Desktop\Git\AGENCIA-DE-VIAJES\server\db&back\db&back\obj\Debug\net8.0\db&back.genruntimeconfig.cache
 C:\Users\macia\OneDrive\Desktop\Git\AGENCIA-DE-VIAJES\server\db&back\db&back\obj\Debug\net8.0\ref\db&back.dll
+C:\Users\macia\OneDrive\Desktop\Git\AGENCIA-DE-VIAJES\server\db&back\db&back\bin\Debug\net8.0\Npgsql.dll
+C:\Users\macia\OneDrive\Desktop\Git\AGENCIA-DE-VIAJES\server\db&back\db&back\bin\Debug\net8.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
