@@ -11,8 +11,8 @@ const handleSubmit = async (e) => {
   e.preventDefault();
 
   const url = isLogin
-    ? 'http://localhost:5251/api/user/login'
-    : 'http://localhost:5251/api/user/register';
+    ? 'https://agencia-de-viajes-zh53.onrender.com/api/user/login'
+    : 'https://agencia-de-viajes-zh53.onrender.com/api/user/register';
 
   const data = isLogin
     ? { email, password }
